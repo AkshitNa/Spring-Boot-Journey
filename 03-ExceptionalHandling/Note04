@@ -1,0 +1,36 @@
+# Checked and Unchecked Exception
+
+A) Checked Exceptions [Compile Time Exception]:
+
+1. These are exceptions that are checked by the compiler at compile-time.
+2. You must handle these exceptions either by using a try-catch block or by
+   declaring them with the throws keyword in the method signature. If you don't, the code will not compile.
+3. They usually represent situations that are outside the program’s control, like problems
+   with file handling, database operations, or network connections.
+
+Examples => IOException (e.g., file not found)
+            SQLException (e.g., database access error)
+
+B) Unchecked Exceptions [Run Time Exception]:
+
+1. These are exceptions that are not checked by the compiler at compile-time.
+2. You are not required to handle or declare them in the code, though you can if you want to.
+   They usually represent programming errors, like bad logic or misuse of APIs.
+3. Unchecked exceptions occur due to bugs or logical errors in the code and are subclasses of RuntimeException.
+4. In the case of unchecked exceptions (like ArithmeticException, NullPointerException, etc.),
+   the program will compile successfully, even if there's a possibility of the exception happening.
+
+Examples => NullPointerException (e.g., trying to access an object that is null)
+            ArrayIndexOutOfBoundsException (e.g., trying to access an invalid index of an array)
+
+Note: Checked exceptions must be handled by the programmer, while unchecked exceptions
+don't have to be, though it’s good practice to handle them when necessary.
+
+Note: ArithmeticException is an unchecked exception in Java that occurs when an illegal or
+      undefined arithmetic operation is performed, such as dividing a number by zero.
+      Since it's an unchecked exception, the compiler doesn't force you to handle it,
+      but you can still catch it using a try-catch block.
+
+Note: These unchecked exceptions occur at runtime, meaning the compiler doesn't force you to handle them.
+      However, if they occur during the execution of the program and are not handled, they can cause the program to crash.
+      So, while the program will compile, it might still fail at runtime if you don't handle the unchecked exceptions properly.

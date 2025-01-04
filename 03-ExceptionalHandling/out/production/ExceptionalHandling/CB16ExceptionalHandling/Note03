@@ -1,0 +1,59 @@
+# Exception
+
+1. It is basically a signal that something went wrong in your program. [Unwanted/Unexpected event]
+
+=> Dividing a number by zero.
+=> Trying to open a file that doesn't exist.
+=> Entering the wrong type of data (like giving a letter where a number is expected).
+
+2. It happens at "run time" and disrupts the program. [Important]
+
+3. When such a problem happens, Java generates an exception to let you know.
+   If this exception isn't handled (or taken care of), the program will crash.
+
+# Exception handling [Providing an alternative way as exceptions do not fix automatically]
+
+1. It means catching these problems (exceptions) and handling them in a way that doesn't crash the program.
+Basically the program has a "graceful termination".
+
+2. Java provides a special way to do this using:
+
+=> try: You put the code that might cause a problem inside the try block.
+=> catch: If a problem happens in the try block, it will be "caught" by the catch block.
+=> finally: This block is optional and always runs, whether or not an exception occurred.
+            It is usually used to clean up resources, like closing a file.
+=> throw: This is used to manually create an exception when you want to signal that something went wrong.
+
+# Exceptions vs Errors
+
+=> Exceptions are typically problems in the code that can be fixed, while errors are serious
+   system failures that are often beyond the program's control.
+
+Here's a table highlighting 5 important differences between **Exception** and **Error** in Java:
+
+1. Definition:
+
+=> An exception is a problem that occurs in the program and can usually be handled or fixed,
+   like invalid input or missing files.
+=> An error is a more serious issue that occurs in the system, often related to the environment
+   or the Java Virtual Machine (JVM), and can't usually be handled.
+
+2. Recoverability:
+
+=> Exceptions can be caught and recovered from using try-catch blocks.
+=> Errors are usually not recoverable, and the program will likely crash.
+
+3. Type of Issues:
+
+=> Exceptions represent issues like a wrong user input, file not found, or dividing by zero.
+=> Errors represent critical problems like the program running out of memory or a stack overflow.
+
+4. When They Occur:
+
+=> Exceptions typically occur due to mistakes in the code or user actions.
+=> Errors occur due to system-level failures, such as hardware issues or low memory.
+
+5. Examples:
+
+=> Common examples of exceptions are NullPointerException, IOException, and ArithmeticException.
+=> Common examples of errors are OutOfMemoryError, StackOverflowError, and VirtualMachineError.

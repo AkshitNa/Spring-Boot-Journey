@@ -1,0 +1,59 @@
+=> Throwable class extends Object Class
+=> Exception Class, Runtime Exception and Error Class are sub-classes of Throwable class.
+
+# Exception Object
+
+1. An exception is an object in Java.
+2. When an exception occurs, an exception object is created to represent the problem, and
+   the default exception handler handles it if you don't catch the exception yourself.
+
+3. This exception object contains information about the error, such as:
+
+=> Type of exception (which class it belongs to, like ArithmeticException, NullPointerException, etc.)
+=> Message (a description of the error)
+=> Stack trace (the sequence of method calls that led to the error.
+
+4. Exception object is created by the method where exception occurs, and then the method
+   passes the exception object to the JVM. JVM checks whether the exception is handled by the programmer
+   or not using try-catch, if not JVM passes the exception object to the default exception handler.
+   So basically, if you don't handle the exception using a try-catch block, the default exception handler
+   provided by the Java Runtime Environment (JRE) steps in.
+
+# Detailed Summary
+
+A) Exception Object Creation:
+
+When an exception occurs in a method (such as dividing by zero, accessing a null object, etc.),
+the method automatically creates an exception object. This exception object contains details about the error,
+like the type of exception and the stack trace.
+
+B) Passing the Exception to the JVM:
+
+The method that caused the exception passes the exception object to the JVM.
+
+C) Checking for Exception Handling:
+
+The JVM checks whether the exception is handled in the method using a try-catch block.
+If the exception is handled (i.e., there is a catch block for that type of exception),
+the code inside the catch block will execute, and the program will continue running.
+
+D) Passing to Default Exception Handler:
+
+If the exception is not handled by the programmer (i.e., no try-catch block), the JVM will pass
+the exception object to the default exception handler.
+
+E) Default Exception Handler:
+
+The default exception handler is provided by the Java Runtime Environment (JRE).
+
+It does the following:
+
+=> Prints the exception type and message.
+=> Prints the stack trace (the sequence of method calls leading to the exception).
+=> Terminates the program.
+
+So, to sum it up:
+
+=> The exception object is created by the method where the error occurs.
+=> The JVM checks if the programmer has handled the exception using a try-catch block.
+=> If not handled, the JVM sends the exception to the default exception handler, which prints the details and stops the program.

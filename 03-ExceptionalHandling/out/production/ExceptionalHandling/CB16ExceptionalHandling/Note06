@@ -1,0 +1,35 @@
+# Use of try, catch, finally, throw, and throws keywords in Java
+
+1. try
+
+Where to use: Use it to write code that might cause an exception.
+Purpose: To try running code that might fail and catch the error if it happens.
+
+2. catch
+
+Where to use: Use it to catch and handle an exception that occurs in the try block.
+Purpose: To respond to an error and prevent the program from crashing.
+
+3. finally
+
+Where to use: Use it to write code that should always run, whether or not an exception occurred.
+Purpose: To clean up resources (like closing files or connections) that need to be closed regardless of success or failure.
+
+4. throws [Compile Time Exception]
+
+Where to use: Use it in a method signature to declare that the method might throw certain exceptions.
+Purpose: To inform other methods or callers that they need to handle or declare the exceptions that might be thrown by this method.
+
+5. throw [Runtime Exception]
+
+Where to use: Use it to manually create [throw new ExceptionName();]
+              and throw an exception when a certain condition is met.
+Purpose: To signal that something went wrong in your method.
+
+# Summary
+
+try: Wrap code that might throw an exception.
+catch: Handle the exception if it occurs.
+finally: Execute code that must run after the try and catch, regardless of whether an exception occurred.
+throws: Declare that a method can throw exceptions, so the caller knows to handle them.
+throw: Manually create and throw an exception.

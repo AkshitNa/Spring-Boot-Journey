@@ -1,0 +1,22 @@
+1) To obey CORS Policy, go to Gym Main Application and paste the following.
+
+@Bean
+	public WebMvcConfigurer corsConfigurer()
+	{
+		return new WebMvcConfigurer()
+		{
+			public void addCorsMappings(CorsRegistry registry)
+			{
+				registry.addMapping("/**")
+						.allowedMethods("*")
+						.allowedOrigins("http://localhost:3000/");
+			}
+		};
+	}
+
+
+Note: Now, the Frontend are ready to accept API Calls from the backend.
+
+2) npm install axios
+
+3) Create a folder and create getGymDetailsAPI function.

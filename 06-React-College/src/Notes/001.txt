@@ -1,0 +1,7 @@
+Lesson -> 
+
+1) We will create a College Component
+
+2) We will call the data from our Spring-College API through Custom Hooks.
+
+3) Basically we are connecting our Backend With our FrontEnd.

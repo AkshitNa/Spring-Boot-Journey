@@ -1,0 +1,36 @@
+Q - Are error and runtimeException class same?
+
+# Error
+
+Definition: Error is a class that represents serious problems that are usually outside the control of the program.
+            These problems are typically related to the JVM (Java Virtual Machine) or system-level issues.
+
+Handling: Error is not meant to be caught or handled in most cases because these issues are usually
+          too severe [The program or JVM is in a bad state] for the program to recover from.
+
+Examples:
+OutOfMemoryError (when the JVM runs out of memory)
+StackOverflowError (when the stack of method calls exceeds its limit)
+
+# RuntimeException
+
+Definition: RuntimeException is a subclass of Exception and represents exceptions that
+            can occur during the program's runtime. These exceptions usually result from
+            bugs or logic errors in the code.
+
+Handling: RuntimeException and its subclasses are unchecked exceptions, which means you are
+          not required to handle them. However, it is often good practice to handle them to
+          improve the robustness of your code.
+
+Examples:
+NullPointerException (trying to use an object reference that is null)
+ArrayIndexOutOfBoundsException (accessing an invalid index of an array)
+
+Note: if-else vs Exceptional Handling
+
+if-else: Best for predictable conditions in normal program flow.
+
+Exceptions: Best for handling unexpected, abnormal conditions (like invalid user input, missing files,
+network failures) and separating error handling from normal code flow. They make error handling
+more elegant, centralized, and easier to maintain.
+
